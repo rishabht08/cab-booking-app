@@ -1,0 +1,203 @@
+<!-- Page Content  -->
+{{!-- <div class="click-temp">
+    <div class="header-overlay"> </div>
+    <div class="input-group mb-3 header-overlay2">
+        <input type="text" class="form-control" placeholder="Source" aria-label="Recipient's username"
+            aria-describedby="basic-addon2" id="destination">
+    </div>
+    <div class="input-group mb-3 header-overlay3">
+        <input type="text" class="form-control" placeholder="Destination" aria-label="Recipient's username"
+            aria-describedby="basic-addon2" id="destination2">
+    </div>
+    <div class="header-overlay4">
+        <button class="btn btn-primary" id="searchCabs">Search Cab</button>
+    </div>
+</div> --}}
+<div class="row wigets-row effect5" id="ride-planner">
+    <div class="col-sm-4">
+        <input class="form-control mb-3 ride-from" type="text" placeholder="Source " id="destination">
+        <input class="form-control mb-3 ride-to" type="text" placeholder="Destination " id="destination2">
+    </div>
+    <div class="col-sm-5 mb-3">
+        <div class="input-group input-ride-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="vehicle">Vehicle</label>
+            </div>
+            <select class="custom-select" id="vehicle">
+                <option value="1">SUV</option>
+                <option selected value="2">Sedan</option>
+            </select>
+        </div>
+        <div>
+            <button id="searchCabs" class="btn btn-primary">BOOK MY RIDE</button>
+        </div>
+    </div>
+    <div class="col-sm-3 text-center">
+        <div class="card bg-c-green ride-card">
+            <div class="user-card-block">
+                <h2 class="text-right"><i class="fas fa-rupee-sign f-left"></i><span id="rideRate">0</span>
+                </h2>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="map-responsive">
+    <div id="map"></div>
+</div>
+<!--<div class="bg-modal">
+    <div class="modal-content">
+        <div class="close"><a href="#" style="text-decoration: none; color:black">+</a></div>
+        <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png(27 kB)
+https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png
+" alt=""
+            style="width: 100px; height: 100px;">
+        <form style="margin-top: 15px;">
+            <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-warning">Submit</button>
+        </form>
+    </div>
+</div> -->
+
+<div class="modal fade" id="login-modal" data-backdrop="static">
+    <div class="modal-dialog modal-login" id="login-popup">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="avatar">
+                    <img src="images/avatar.png" alt="Avatar">
+                </div>
+                <h4 class="modal-title">Login</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body" id="login-modal-body">
+                <form id="login-form" action="#" method="#">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="login-email" name="email" placeholder="Email"
+                            required="required">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="login-password" name="password"
+                            placeholder="Password" required="required">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Login</button>
+                    </div>
+
+
+                </form>
+                <div id="signup-link">
+                    Don't have an account? You can <a data-toggle="modal" href="#signup-modal" data-dismiss="modal">Sign
+                        Up</a> Here.
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="modal fade" id="signup-modal" data-backdrop="static">
+    <div class="modal-dialog modal-signup" id="signup-popup">
+        <div class="modal-content" id="signup-content">
+            <div class="modal-header">
+                <div class="avatar">
+                    <img src="images/avatar.png" alt="Avatar">
+                </div>
+                {{!-- <h4 class="modal-title">Member Login</h4> --}}
+                <h4>SignUp</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body" id="signup-modal-body">
+                <div class="signup-form" id="signup-form">
+                    <form action="#" method="post">
+
+                        {{!-- <p class="lead">It's free and hardly takes more than 30 seconds.</p> --}}
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control" name="fullname" id="signup-name"
+                                    placeholder="Full Name" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+                                <input type="email" class="form-control" name="email" placeholder="Email Address"
+                                    required="required" id="signup-email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                <input type="password" class="form-control" name="password" placeholder="Password"
+                                    required="required" id="signup-password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-phone"></i>
+
+                                </span>
+                                <input type="number" class="form-control" name="phone" placeholder="Phone Number"
+                                    value="+91-" id="signup-phonenumber">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
+                        </div>
+                        <p class="small text-center">By clicking the Sign Up button, you agree to our <br><a
+                                href="#">Terms
+                                &amp; Conditions</a>, and <a href="#">Privacy Policy</a>.</p>
+                    </form>
+
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="text-center">
+                    <p>Already have an account?</p> <a data-toggle="modal" href="#login-modal" data-dismiss="modal"
+                        id="login-link">Login here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="booking-card bCard">
+    <p>Cab Assigned</p>
+    <img src="https://i.pravatar.cc/45" alt="" width="70px" height="70px" style="border-radius: 50%;" id="cabbyAvatar">
+    <p id="cabbyName"></p>
+    <p id="cabbyNumber"></p>
+    <button class="btn btn-warning btn-2">Cancel Ride</button>
+</div>
+<div class="bg-modal-arrived">
+    <div class="cab-arrived">
+        <h3 class="text-center">Your Cab has Arrived</h3><br>
+        <img src="https://i.pravatar.cc/45(2 kB)
+https://i.pravatar.cc/45
+" alt="" width="70px" height="70px" style="border-radius: 50%;" id="cabbyAvatar">
+        <p id="cabbyArrivedName">Rupesh Sharma</p>
+        <div style="display: inline;">
+            <button class="btn btn-success btn-ride">Ride to Destination</button>
+            <button class="btn btn-warning btn-cancel">Cancel Ride</button>
+        </div>
+    </div>
+</div>
+<div class="bg-modal-reached">
+    <div class="cab-reached">
+        <p class="text-center" id="reached"></p><br>
+        <p>Thank You for riding with us</p>
+        <button class="btn btn-success btn-reached">Pay and Return to Dashboard</button>
+    </div>
+</div>

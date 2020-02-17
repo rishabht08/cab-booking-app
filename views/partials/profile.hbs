@@ -1,0 +1,171 @@
+<div id="profile" class="modal fade text-center">
+    <div class="modal-dialog" id="profile-dialog">
+        <div class="modal-content" id="profile-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="model-heading" class="text-center">My Profile </h4>
+            </div>
+            <div class="modal-body">
+                <!-- container start -->
+
+                <div class="nav-wrapper mt-2">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-info-tab" data-toggle="tab" href="#nav-info"
+                                role="tab" aria-controls="nav-info" aria-selected="true">Personal information</a>
+                            <a class="nav-item nav-link" id="nav-place-tab" data-toggle="tab" href="#nav-place"
+                                role="tab" aria-controls="nav-place" aria-selected="false">My places</a>
+                            <a class="nav-item nav-link" id="nav-journey-tab" data-toggle="tab" href="#nav-journey"
+                                role="tab" aria-controls="nav-journey" aria-selected="false">Journey preferences</a>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-info" role="tabpanel"
+                        aria-labelledby="nav-place-tab">
+                        <form action="" method="" class="personal-information mt-4">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <span class="tag">Personal info</span><br>
+                                    <p class="description font-weight-light">Add your details. We recommend
+                                        uploading a photo.</p>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="input-group ml-5">
+                                        <input id="name" name="name" type="text" placeholder="Name" required="">
+                                    </div>
+                                    <div class="input-group ml-5 mt-4">
+                                        <input id="number" name="number" type="tel" placeholder="Mobile Number"
+                                            required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-md-3">
+                                    <span class="tag">Change profile</span><br>
+
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="input-group ml-5">
+                                        <input id="file" name="file" type="file">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-md-3">
+                                    <span class="tag">Account info</span><br>
+                                    <p class="description font-weight-light">Add your email to set up your account.
+                                        You'll be able to change it later.</p>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="input-group ml-5">
+                                        <input id="email" name="email" type="email" placeholder="Email" required="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="nav-place" role="tabpanel" aria-labelledby="nav-place-tab">
+                        <form action="/map" method="" class="personal-information mt-4">
+                            <div class="row">
+                                <div class="col text-right">
+                                    <input id="add-location" type="submit" class="btn btn-link btn-sm text-right"
+                                        value="Add location">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col mt-5">
+                                    <div class="saved">Saved locations</div>
+                                    <hr>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="update-location"> Your fav location shown here</div>
+                                </div>
+                                <div class="col-lg-4 text-right">
+                                    <a class="delete-location" href=""><i class="fas fa-trash mr-3"></i>Delete
+                                        location</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="nav-journey" role="tabpanel" aria-labelledby="nav-journey-tab">
+                        <form action="" method="" class="journey-preferences mt-4">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <span class="tag">Set the mood</span><br>
+                                    <p class="description font-weight-light">What would you like to listen to?</p>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="input-group ml-5 mt-4">
+                                        <select>
+                                            <option value="" selected>Music</option>
+                                            <option value="1">Yes</option>
+                                            <option value="2">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-md-3">
+                                    <span class="tag">Comfort</span><br>
+                                    <p class="description font-weight-light">Ride comfortably. Indicate whether
+                                        you'd prefer the air-conditioning on or off.</p>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="input-group ml-5">
+                                        <div class="air">
+                                            <select>
+                                                <option value="" selected>Air conditioning</option>
+                                                <option value="1">On</option>
+                                                <option value="2">Off</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-md-3">
+                                    <span class="tag">Driver call</span><br>
+                                    <p class="description font-weight-light">Choose when you want the driver to call
+                                        you</p>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="input-group ml-5">
+                                        <div class="driver">
+                                            <select>
+                                                <option value="" selected>Driver call</option>
+                                                <option value="1">Do not call under any cicumstances</option>
+                                                <option value="2">Only in case of doubts</option>
+                                                <option value="3">When journey is accepted</option>
+                                                <option value="4">On arrival to pickup point</option>
+                                                <option value="5">On accepting journey and on arrival</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+
+                </div>
+
+                <!--container end-->
+
+                <div class="modal-footer">
+                    <button class="button button-info mt-2" id="form-submit" type="submit">
+                        <span>Save</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>

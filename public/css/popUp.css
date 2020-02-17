@@ -1,0 +1,141 @@
+.bg-modal {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.bg-modal-arrived {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+#login-modal-body {
+  overflow-y: unset;
+  width: inherit;
+}
+
+.bg-modal-reached {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.modal-content {
+  width: 400px;
+  height: 350px;
+  background-color: white;
+  border-radius: 5px;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-size: 40px;
+}
+
+.booking-card {
+  padding: 0;
+  overflow: hidden;
+  width: 150px;
+  height: 20px;
+  background-color: #000000b8;
+
+  border-radius: 5px;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  margin-top: 2%;
+  margin-right: 0;
+  margin-left: auto;
+  position: relative;
+
+  transition-property: height, width, background-color;
+  transition-duration: 1s, 1s, 1.5s;
+}
+.booking-card-start {
+  padding: 0;
+  overflow: hidden;
+  width: 220px;
+  height: 150px;
+  background-color: #49ad35;
+
+  border-radius: 5px;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  margin-top: 2%;
+  margin-right: 0;
+  margin-left: auto;
+  position: relative;
+}
+.booking-card:hover {
+  height: 150px;
+  width: 220px;
+  background-color: #49ad35;
+}
+.booking-card p {
+  color: white;
+}
+.booking-card button {
+  color: rgb(0, 0, 0);
+}
+.centre-allign {
+  justify-content: center;
+  align-items: center;
+}
+
+.cab-arrived {
+  padding: 0;
+  overflow: hidden;
+  width: 400px;
+  height: 300px;
+  background-color: #ffffff;
+
+  border-radius: 5px;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10%;
+  margin-bottom: auto;
+  position: relative;
+}
+.cab-reached {
+  padding: 0;
+  overflow: hidden;
+  width: 400px;
+  height: 200px;
+  background-color: #ffffff;
+
+  border-radius: 5px;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10%;
+  margin-bottom: auto;
+  position: relative;
+}
+
+#cabbyArrivedName {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,239 @@
+.button-border {
+  border-radius: 0px;
+  margin-top: 0px;
+}
+input {
+  /*border-radius: 0px !important;*/
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.login-bg {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  border-radius: 5px;
+  height: 550px;
+}
+
+.div-bg {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.shadow {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.heading-welcome {
+  padding-top: 20px;
+  margin-bottom: 0px;
+}
+
+.btn-login {
+  margin-top: 10px;
+}
+
+.label-style {
+  color: #35b399;
+}
+.signup-bottom {
+  padding-bottom: 30px;
+}
+.signup-bottom2 {
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.top-margin {
+  margin-top: 60px;
+  padding-top: 50px;
+}
+
+.form-control,
+.form-control:focus,
+.input-group-addon {
+  border-color: #e1e1e1;
+  border-radius: 0;
+}
+
+.signup-form h2 {
+  color: #636363;
+  margin: 0 0 15px;
+  text-align: center;
+}
+
+.signup-form .lead {
+  font-size: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #636363;
+}
+
+.signup-form .small {
+  color: #636363;
+}
+
+.signup-form form {
+  padding: 30px 30px 0 30px;
+}
+
+.signup-form .form-group {
+  margin-bottom: 20px;
+}
+
+.signup-form label {
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.signup-form .form-control {
+  font-size: 1.4rem;
+  min-height: 38px;
+  box-shadow: none !important;
+  border-width: 0 0 1px 0;
+}
+
+.signup-form .input-group-addon {
+  max-width: 42px;
+  text-align: center;
+  background: none;
+  border-width: 0 0 1px 0;
+  padding-left: 5px;
+}
+
+.signup-form .btn {
+  font-size: 16px;
+  font-weight: bold;
+  background: #19aa8d;
+  border-radius: 3px;
+  border: none;
+  min-width: 140px;
+  outline: none !important;
+}
+
+.signup-form .btn:hover,
+.signup-form .btn:focus {
+  background: #179b81;
+}
+
+.signup-form a {
+  color: #19aa8d;
+  text-decoration: none;
+}
+
+#login-link {
+  color: #179b81;
+}
+#signup-link {
+  margin-top: 40px;
+  font-size: 16px;
+}
+#signup-link a {
+  color: #179b81;
+}
+.input-group-addon {
+  margin: auto;
+}
+
+.signup-form a:hover {
+  text-decoration: underline;
+}
+
+.signup-form .fa {
+  font-size: 21px;
+}
+
+.signup-form .fa-paper-plane {
+  font-size: 17px;
+}
+
+.signup-form .fa-check {
+  color: #fff;
+  left: 9px;
+  top: 18px;
+  font-size: 7px;
+  position: absolute;
+}
+
+#signup-content {
+  min-height: 87vh;
+  width: 390px;
+  margin: 0 auto;
+}
+#signup-modal-body {
+  position: relative;
+  bottom: 25px;
+  width: inherit;
+  padding: 0;
+  max-height: inherit;
+  overflow-y: unset;
+}
+#signup-content .modal-footer {
+  position: relative;
+  bottom: 25px;
+}
+
+.bg-c-green {
+  background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+}
+
+.card {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+  box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+  border: none;
+  margin-bottom: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card .card-block {
+  padding: 25px;
+}
+
+input#start-location-input,
+#destination-location-input {
+  width: 250px;
+}
+#getfares {
+  width: inherit;
+}
+
+#go-btn {
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+#book-btn {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+#bookride {
+  width: inherit;
+}
+
+#gmap {
+  height: 529px;
+}
+
+#route-planner {
+  color: #fff;
+  background-color: #84848462;
+}
+#route-planner h3 {
+  font-weight: bold;
+}
+
+h5.m-b-20 {
+  margin-bottom: 20px;
+}
+.dirServInfo {
+  font-size: 18px;
+  border: #f6f6f6 1px solid;
+  border-radius: 20px;
+  margin-top: 15px;
+  text-align: center;
+  color: white;
+  padding: 6px;
+}

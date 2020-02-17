@@ -1,0 +1,103 @@
+#map {
+
+    
+    height: 100%;
+    width: 100%;
+    position: fixed !important;
+    
+   
+    
+   
+
+
+}
+
+.map-responsive{
+    overflow: hidden;
+    
+    height: 0;
+}
+
+.header-overlay {
+    margin-top: 0px;
+    width: 70%;
+    height: 25%;
+    background: rgb(0, 0, 0);
+    opacity: 0.2;
+    border-radius: 10px;
+
+
+
+    position: absolute;
+    top: 0;
+    left: 20%;
+
+    z-index: 1;
+
+
+}
+
+.header-overlay2 {
+    margin-top: 30px;
+    width: 60%;
+
+    position: absolute;
+    top: 0;
+    left: 25%;
+
+    z-index: 1;
+
+
+}
+
+.header-overlay3 {
+    margin-top: 80px;
+    width: 60%;
+
+    position: absolute;
+    top: 0;
+    left: 25%;
+
+    z-index: 1;
+
+
+}
+
+.header-overlay4 {
+    margin-top: 130px;
+    width: 20%;
+
+    position: absolute;
+    top: 0;
+    left: 25%;
+
+    z-index: 1;
+
+
+}
+
+.header-overlay5 {
+    margin-top: 225px;
+    width: 5%;
+
+    position: absolute;
+    top: 0;
+    left: 7.5%;
+
+    z-index: 1;
+
+
+}
+
+.header-overlay6 {
+    margin-top: 450px;
+    width: 5%;
+
+    position: absolute;
+    top: 0;
+    left: 7.5%;
+
+    z-index: 1;
+
+
+}

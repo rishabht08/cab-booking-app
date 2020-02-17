@@ -1,0 +1,455 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.active #sidebar-items {
+  display: none;
+}
+.icon-size {
+  font-size: 20px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+i,
+span {
+  display: inline-block;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+  background: #000000b8;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  min-width: 80px;
+  max-width: 80px;
+  text-align: center;
+}
+
+#sidebar.active .sidebar-header h3,
+#sidebar.active .CTAs {
+  display: none;
+}
+
+#sidebar.active .sidebar-header strong {
+  display: block;
+}
+
+#sidebar ul li a {
+  text-align: left;
+}
+
+#sidebar.active ul li a {
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+#sidebar.active ul li a i {
+  margin-right: 0;
+  display: block;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+#sidebar.active ul ul a {
+  padding: 10px !important;
+}
+
+#sidebar.active .dropdown-toggle::after {
+  top: auto;
+  bottom: 10px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #00c59e;
+  color: #fff;
+}
+
+#sidebar .sidebar-header strong {
+  display: none;
+  font-size: 1.8em;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #000;
+  background: #27d0ae5e;
+}
+.logo-inline {
+  display: inline-block;
+}
+#sidebar ul li a i {
+  margin-right: 10px;
+}
+
+#sidebar ul li.active1 > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #27d0ae;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #41c0a7;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: #fff;
+  color: #7386d5;
+}
+
+a.article,
+a.article:hover {
+  background: #6d7fcc !important;
+  color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #sidebar {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+    margin-left: -80px !important;
+  }
+  .dropdown-toggle::after {
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+  #sidebar.active {
+    margin-left: 0 !important;
+  }
+  #sidebar .sidebar-header h3,
+  #sidebar .CTAs {
+    display: none;
+  }
+  #sidebar .sidebar-header strong {
+    display: block;
+  }
+  #sidebar ul li a {
+    padding: 20px 10px;
+  }
+  #sidebar ul li a span {
+    font-size: 0.85em;
+  }
+  #sidebar ul li a i {
+    margin-right: 0;
+    display: block;
+  }
+  #sidebar ul ul a {
+    padding: 10px !important;
+  }
+  #sidebar ul li a i {
+    font-size: 1.3em;
+  }
+  #sidebar {
+    margin-left: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+#dashlogout {
+  border-radius: 0;
+  width: 200px;
+  font-size: 15px;
+}
+.btn-info {
+  float: right;
+  background: transparent;
+  border: none;
+}
+
+/*Accordian for support page goes here */
+.accordion .card {
+  border: none;
+  margin-bottom: 2px;
+}
+.accordion .card-header {
+  background: #21c2a2;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.accordion .card-header h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.accordion .card-header h2 span {
+  float: left;
+  margin-top: 10px;
+}
+.accordion .card-header button {
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  float: right;
+}
+.accordion .card-header button:hover {
+  color: #23384e;
+}
+
+/* support Modal Styles are here */
+.modal-dialog {
+  overflow-y: initial !important;
+  min-width: 70%;
+}
+.modal-content {
+  min-height: 95vh;
+}
+.modal-body {
+  max-height: 450px;
+  overflow-y: auto;
+}
+.modal-header {
+  display: inline-block;
+}
+
+.fa-greater-than {
+  float: right;
+}
+#style-1::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+#style-1::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+/* 
+
+Ride Planner Styles
+
+*/
+
+#ride-planner {
+  position: absolute;
+  top: 40px;
+  left: 335px;
+  min-width: 60%;
+  height: 130px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #404040e3;
+  border-radius: 5px;
+  color: #fff;
+  z-index: 1;
+}
+#ride-planner.row.wigets-row button {
+  background-color: #1bbc9b;
+  border-radius: 0px;
+  border-bottom: solid 2px transparent;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  font-size: 14px;
+  padding: 9px 25px 9px 25px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-family: Roboto;
+}
+#ride-planner.row.wigets-row button:hover {
+  background-color: #2b383e;
+  border-bottom: solid 2px #1bbc9b;
+  border-radius: 30px;
+  border: none;
+}
+#ride-planner .row li a {
+  color: #222222;
+  text-decoration: none;
+}
+
+#ride-planner .row.wigets-row li a:hover {
+  color: #1bbc9b;
+}
+
+#ride-planner.row.wigets-row ul li {
+  margin-right: 2px;
+  float: left;
+  text-align: center;
+  color: #222222;
+  width: 150px;
+  background-color: #f5f5f5;
+  height: 92px;
+}
+#ride-planner .form-control:focus {
+  color: #464a4c;
+  border-color: #75c75a;
+  outline: 0;
+}
+
+.ride-type {
+  margin-top: 7px;
+}
+.ride-from,
+.ride-to {
+  line-height: 2;
+  font-size: 15px;
+}
+.input-group-text {
+  line-height: 2;
+  margin-left: -1px;
+  font-size: 15px;
+  background: rgb(57, 218, 186);
+  color: #fff;
+  font-weight: bold;
+  
+}
+.input-ride-group {
+  margin-top: 5px;
+  padding: 0 5px 0 2px;
+}
+#vehicle {
+  max-width: 2000px;
+  position: relative;
+  top: 26px;
+  height: 40px;
+}
+
+.ride-card {
+  height: 110px;
+}
+
+.card .user-card-block {
+  margin: auto;
+  padding: 0px;
+}
+
+.user-card-block h2 {
+  color: #fff;
+}
+.effect5 {
+  -webkit-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5),
+    0 10px 8px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5), 0 10px 8px rgba(0, 0, 0, 0.22);
+  -ms-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5), 0 10px 8px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5), 0 10px 8px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5), 0 10px 8px rgba(0, 0, 0, 0.22);
+}

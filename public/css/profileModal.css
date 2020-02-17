@@ -1,0 +1,32 @@
+.modal {
+  padding-right: 0px !important;
+}
+div#profile {
+  position: static;
+  padding-left: 0 !important;
+  flex-grow: 1 !important;
+}
+div#rides {
+  position: static;
+  padding-left: 0 !important;
+  flex-grow: 1 !important;
+}
+div#profile-dialog {
+  display: flex;
+  margin: 0;
+  min-width: 100%;
+  height: 100hv;
+  width: inherit;
+}
+div#profile-content {
+  border-radius: unset;
+  border: 1px solid #ccc;
+  width: inherit;
+  min-height: 100vh;
+  height: 100%;
+  flex-grow: 1;
+}
+#profile-content > div.modal-body {
+  overflow-y: unset;
+  width: 100%;
+}

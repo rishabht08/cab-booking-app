@@ -1,0 +1,83 @@
+<!-- Button trigger modal -->
+{{!-- <button data-toggle="modal" data-target="#supportList">modal</button> --}}
+
+<div class="modal fade" id="supportList" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content" id="support-modal">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="model-heading" class="text-center">How can we help you? </h4>
+            </div>
+            <div class="modal-body">
+                <!-- container start -->
+
+
+                <div>
+                    <p id="model-pragraph"></p>
+                </div>
+
+                {{!-- <form id="support-form">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="">Select a journey</label>
+
+                                <select id="inputState" class="form-control">
+                                    <option>----Select----</option>
+                                    <option>Ride-1</option>
+                                    <option>Ride-2</option>
+                                    <option>Ride-3</option>
+                                    <option>Ride-4</option>
+                                </select>
+
+                            </div>
+                            <div class="form-group ">
+                                <label for="inputPassword3" class="col-sm-3 col-form-label">Give more details</label>
+
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+
+                            </div>
+                            <div class="form-group justify-content-center">
+
+
+                                <input type="submit" class="btn btn-success form-control" id="submit">
+
+                            </div>
+                        </form> --}}
+                <div class="container contact-form">
+
+                    <form method="post">
+                        <h3>Drop Us a Message</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="txtName" class="form-control" placeholder="Your Name *"
+                                        value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *"
+                                        value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="txtPhone" class="form-control"
+                                        placeholder="Your Phone Number *" value="" />
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea name="txtMsg" class="form-control" placeholder="Your Message *"
+                                        style="width: 100%; height: 150px;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!--container end-->
+
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btnContact btn btn-primary" id="close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Flash Ride - Dashboard</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../css/dashboardnav.css">
+    <link rel="stylesheet" href="../css/popUp.css">
+    <link rel="stylesheet" href="../css/mapBoard.css">
+    <link rel="stylesheet" href="../css/info.css">
+    <link rel="stylesheet" href="../css/style_green.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- FONT AWESOME LINK -->
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/login-modal.css">
+    <link rel="stylesheet" href="../css/support.css">
+    <link rel="stylesheet" href="../css/profileModal.css">
+    <style>
+        div.modal-backdrop {
+            display: none !important;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    {{!-- content Wrapper start --}}
+    <div class="wrapper">
+        {{!-- Static Side bar sticky start --}}
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 class="logo-inline">Flash Ride</h3>
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-times"></i>
+                </button>
+                <strong><a href="#" onclick="activeHandeler()"><img src="https://i.pravatar.cc/45" height="45px"
+                            width="45px" alt="" style="border-radius: 50%;"></a></strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li {{#ifCond page_name "dashboard"}}class="active1" {{/ifCond}}>
+                    <a href="/dashboard">
+                        <i class="fas fa-home" id="sizeId"></i>
+                        <span id="sidebar-items">Book</span>
+                    </a>
+
+                </li>
+
+                <li {{#ifCond page_name "profile"}}class="active1" {{/ifCond}}>
+                    <a href="#rides" data-toggle="modal" data-backdrop="false" data-dismiss="modal" id="ridesHistory">
+                        <i class="fas fa-car" id="sizeId"></i>
+                        <span id="sidebar-items">Rides</span>
+                    </a>
+                </li>
+
+                <li {{#ifCond page_name "profile"}}class="active1" {{/ifCond}}>
+                    <a href="#profile" data-toggle="modal" data-backdrop="false" data-dismiss="modal">
+                        <i class="fas fa-user" id="sizeId"></i>
+                        <span id="sidebar-items">Profile</span>
+                    </a>
+                </li>
+                <li {{#ifCond page_name "support"}}class="active1" {{/ifCond}}>
+                    <a href="#theModal" data-toggle="modal" data-dismiss="modal">
+                        <i class="fas fa-life-ring" id="sizeId"></i>
+                        <span id="sidebar-items">Support</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+
+                <li>
+                    <button class="btn btn-danger" id="dashlogout">Logout</button>
+                </li>
+            </ul>
+
+            <div id="theModal" class="modal fade text-center">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="support-modal">
+                        {{> supportContent}}
+
+                    </div>
+                </div>
+            </div>
+            {{> supportResult}}
+        </nav>
+        {{!-- Static Sidebar end --}}
+
+
+        {{{body}}}
+
+        {{> rides }} {{> profile }}
+
+
+
+
+
+    </div>
+
+    {{!-- content wrapper end --}}
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                document.querySelectorAll('#sizeId').forEach(ele => {
+                    ele.classList.add('icon-size');
+                    $('#sidebarCollapse').hide()
+                });
+            });
+            $('.modal').on('show.bs.modal', function () {
+                $('.modal').not($(this)).each(function () {
+                    $(this).modal('hide');
+                });
+            });
+            $('#profile #rides').data('bs.modal', null);
+
+
+
+
+        });
+        function activeHandeler() {
+            $('#sidebar').removeClass('active');
+            $('#sidebarCollapse').show()
+        }
+        function stackModal() {
+
+            $('#theModal').modal('show');
+            console.log("modal handler")
+        };
+
+
+    </script>
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCveF6CHISGohpaLZ8h-XVgLprKGb_bBBI&libraries=geometry,places&callback=init"></script>
+    <script type="text/javascript" src="../js/mainMap.js"></script>
+    <script src="../js/support.js"></script>
+
+    <script src="../js/login_register.js"></script>
+    <script src="../js/onClickRequests.js"></script>
+</body>
+
+</html>

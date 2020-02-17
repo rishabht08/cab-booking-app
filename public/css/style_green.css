@@ -1,0 +1,992 @@
+/*================= MASTER STYLESHEET =================================
+
+	Project     :	TAXI Page
+	Version     :	1.0
+	Last Change : 	28/07/2017
+	Primary Use :   TAXI HTML Page
+
+=======================================================================*/
+/*========================================== LAYOUT ===================================================================
+
+		1.GLOBAL CSS START
+		2.NAVIGATION
+		3.HEADER-1
+		4.HEADER-SLIDER
+		5.HEADER VIDEO
+		6.SERVICES
+		7.LUXURY CARS
+		8.TAXI APP
+		9.COUNTER
+		10.OUR AWESOME FEATURES
+		11.AVAILABLE CAR TYPES
+		12.OUR PRICING PLANS
+		13.BEST PRICING PACKAGES
+		14.TAXI AVAILABLE 24/7 SERVICE
+		15.TAXI BOOKING
+		16.OUR BEST TARIFF PLANS
+		17.OUR LATEST GALLERY
+		18.OUR TEAM
+		19.EMAIL SUBSCRIPTION
+		20.OUR HAPPY CUSTOMERS
+		21.SUPPORT
+		22.FOOTER
+
+=========================================================================================================*/
+/*========================================== COLOR CODES ==============================================
+
+
+	Theme Color	       :#1bbc9b
+	Main Heading Color :#333333
+	SubHeading Color   :#333333
+	Content Color      :#666666
+
+=====================================================================================================*/
+/*========================================== TYPOGRAPHY ==============================================
+
+	BODY  :font-family: 'Raleway', Helvathika, Arial sans-serif;
+
+====================================================================================================*/
+/*========================================== 1.GLOBAL CSS START ===========================================*/
+/* CUSTOM STYLES */
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+body {
+  font-family: "Raleway", Helvathika, Arial, sans-serif;
+  font-size: 14px;
+}
+a {
+  outline: none !important;
+  text-decoration: none !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+/* elements */
+
+p {
+  margin: 0px;
+}
+h1,
+h2,
+h3,
+h4,
+.menu-fs,
+.header-head1 .bgimage-head,
+.link {
+  text-transform: uppercase;
+}
+h1 {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: 2px;
+}
+h2 {
+  color: #333333;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: 1px;
+}
+h3 {
+  color: #333333;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 1px;
+}
+h4 {
+  color: #333333;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 1px;
+}
+.h2-bottom {
+  margin-bottom: 40px;
+}
+.h3-bottom {
+  margin-bottom: 10px;
+}
+.h4-bottom {
+  margin-bottom: 10px;
+}
+p {
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.p-bottom {
+  margin-bottom: 12px;
+}
+a {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+.section-space {
+  padding: 80px 0 80px 0;
+}
+.image-center {
+  margin: 0 auto;
+}
+.image-right {
+  margin: 0 0 0 auto;
+}
+.image-left {
+  margin: 0 auto 0 0;
+}
+.image-radius {
+  border-radius: 3px;
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.btn-1 {
+  background-color: #1bbc9b;
+  border: 0;
+  border-radius: 3px;
+  color: #f3f3f3;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 20px 10px 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 300ms ease-in;
+}
+.btn-1:hover {
+  background-color: #333333;
+}
+.btn-ant:hover {
+  background-color: #f3f3f3;
+  color: #333333;
+}
+.btn-top {
+  margin-top: 30px;
+}
+.btn-top-1 {
+  margin-top: 20px;
+}
+.btn:hover,
+.btn:focus {
+  color: #ffffff;
+}
+.image-bottom {
+  margin: 0 0 20px 0;
+}
+.column-center {
+  float: none;
+  margin: 0 auto;
+}
+.no-padding {
+  padding: 0;
+}
+.no-margin {
+  margin: 0;
+}
+.no-fs {
+  font-size: 0;
+}
+.section-bg-1 {
+  background-color: #ffffff;
+}
+.section-bg-2 {
+  background-color: #f6f6f6;
+}
+iframe {
+  border: 0px;
+}
+.white-text h1,
+.white-text h2,
+.white-text h3,
+.white-text h4,
+.white-text p,
+.white-text-separate {
+  color: #f3f3f3;
+}
+.bgimage-property {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ls {
+  letter-spacing: 1px;
+}
+.distab {
+  display: table;
+}
+.distab-cell-middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+.distab-cell-top {
+  display: table-cell;
+  vertical-align: top;
+}
+.distab-cell {
+  display: table-cell;
+}
+.underline-bottom {
+  margin: 0 0 40px 0;
+}
+.link {
+  color: #1bbc9b;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.link a:hover {
+  color: #333333;
+}
+.link-top {
+  margin-top: 15px;
+}
+.services-bg,
+.app-bg,
+.packages-bg,
+.customer-bg {
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.15);
+  transition: 300ms ease-in;
+}
+.services-bg:hover,
+.app-bg:hover,
+.packages-bg:hover,
+.customer-bg:hover {
+  border: 1px solid #1bbc9b;
+  box-shadow: none;
+}
+.image-grow {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.image-grow:hover {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+}
+/*========================================== NAVIGATION START ===========================================*/
+
+.menu-underline::before {
+  background-color: #333333;
+  border-radius: 3px;
+  content: "";
+  height: 50px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.5s ease 0s, opacity 0.33s ease 0s;
+}
+.menu-underline:hover::before {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.menu-fs,
+.menu-fs li {
+  color: #666666;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+.menu-bg {
+  background: rgb(255, 255, 255) none repeat scroll 0 0;
+}
+.navbar {
+  margin-bottom: 0;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #666666 !important;
+  background-color: transparent !important;
+  margin: 0 0;
+  padding: 15px 15px 15px 15px;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #f3f3f3 !important;
+  background-color: transparent !important;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  color: #1bbc9b !important;
+}
+.navigation-tb {
+  margin: 5px 0;
+}
+.nav > li {
+  display: table;
+}
+.navbar-right {
+  margin-right: 0;
+}
+/*========================================== NAVIGATION END ===========================================*/
+/*========================================== HEADER-1 START ===========================================*/
+
+.header-bgimage {
+  background-image: url("../images/1500x630x1.jpg");
+}
+.header-section-space {
+  padding: 220px 0 220px 0;
+}
+.header-head1-bottom {
+  margin-bottom: 20px;
+}
+.header-head2 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+.header-btn {
+  background-color: transparent;
+  border: 1px solid #f3f3f3;
+  border-radius: 3px;
+  color: #f3f3f3;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 20px 10px 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 300ms ease-in;
+}
+.header-btn:hover {
+  color: #333333;
+  background-color: #f3f3f3;
+  border: 1px solid transparent;
+}
+/*========================================== HEADER-1 END ===========================================*/
+/*========================================== HEADER-SLIDER START ===========================================*/
+/*=========== HEADER-SLIDER-ONE-BGIMAGE =================*/
+
+.header-slider-bgimage1 {
+  background-image: url("../images/1500x630x2.jpg");
+}
+/*=========== HEADER-SLIDER-TWO-BGIMAGE =================*/
+
+.header-slider-bgimage2 {
+  background-image: url("../images/1500x630x3.jpg");
+}
+/*=========== HEADER-SLIDER-THREE-BGIMAGE =================*/
+
+.header-slider-bgimage3 {
+  background-image: url("../images/1500x630x4.jpg");
+}
+.header-section-slider-space {
+  padding: 50px 0 50px 0;
+}
+.header-section-slider-height {
+  height: 500px;
+  overflow: hidden;
+}
+.outer {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+/*========================================== HEADER-SLIDER END ===========================================*/
+/*========================================== HEADER VIDEO START ===========================================*/
+
+.video-bgimage {
+  background-image: url("../images/1500x630x5.jpg");
+}
+.pattern-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.video-section .buttonBar {
+  display: none;
+}
+.player {
+  font-size: 1px;
+}
+/*========================================== HEADER VIDEO END ===========================================*/
+/*========================================== SERVICES START ===========================================*/
+
+.services-bg {
+  background-color: #ffffff;
+  padding: 30px 15px 30px 15px;
+  border: 1px solid transparent;
+}
+/*========================================== SERVICES END ===========================================*/
+/*========================================== LUXURY CARS START ===========================================*/
+
+.luxury-left-pad {
+  padding-left: 15px;
+}
+.luxury-bgimage {
+  padding: 30px 30px 30px 30px;
+}
+.luxury-bg-dark-bgimage {
+  background-image: url("../images/750x600.jpg");
+  padding: 30px 30px 30px 30px;
+}
+.luxury-center {
+  display: table;
+  margin: 0 auto;
+}
+.luxury-line-pad {
+  padding: 10px 0 10px 40px;
+}
+.luxury-text-top {
+  padding-top: 0;
+}
+/*========================================== LUXURY CARS END ===========================================*/
+
+/*========================================== TAXI APP START ===========================================*/
+
+.app-left-pad {
+  padding-left: 15px;
+}
+.app-heading-bottom {
+  padding-bottom: 15px;
+}
+.app-bg {
+  background-color: #ffffff;
+  padding: 20px 20px 20px 20px;
+  border: 1px solid transparent;
+}
+/*========================================== TAXI APP END ===========================================*/
+/*========================================== COUNTER START ===========================================*/
+
+.counter-num {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 12px;
+  margin-top: 10px;
+}
+.counter-bgimage {
+  background-image: url("../images/1500x600x1.jpg");
+}
+.counter-section-space {
+  padding: 120px 0 120px 0;
+}
+/*========================================== COUNTER END ===========================================*/
+/*========================================== OUR AWESOME FEATURES START ===========================================*/
+
+.features-icon-left {
+  float: left;
+}
+.features-pad-left {
+  padding-left: 84px;
+}
+.features-bottom {
+  padding-bottom: 30px;
+}
+.features-bottom:last-child {
+  padding-bottom: 0;
+}
+/*========================================== OUR AWESOME FEATURES END ===========================================*/
+/*========================================== AVAILABLE CAR TYPES START ===========================================*/
+
+.types-row-bottom {
+  padding-bottom: 30px;
+}
+.types-row-bottom:last-child {
+  padding-bottom: 0;
+}
+/*========================================== AVAILABLE CAR TYPES END ===========================================*/
+/*========================================== OUR PRICING PLANS START ===========================================*/
+
+.pricing-price {
+  color: #1bbc9b;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 38px;
+}
+/*========================================== OUR PRICING PLANS END ===========================================*/
+/*========================================== BEST PRICING PACKAGES START ===========================================*/
+
+.packages-bg {
+  background-color: #ffffff;
+  padding: 30px 20px 30px 20px;
+  border: 1px solid transparent;
+}
+.packages-bg h2 {
+  color: #1bbc9b;
+}
+.pricing-tag {
+  color: #333333;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  padding: 15px 0;
+}
+.price-list-bottom p {
+  padding-bottom: 15px;
+}
+.price-list-bottom p:last-child {
+  padding-bottom: 0;
+}
+/*========================================== BEST PRICING PACKAGES END ===========================================*/
+/*========================================== TAXI AVAILABLE 24/7 SERVICE START ===========================================*/
+
+.available-bgimage {
+  background-image: url("../images/1500x600x3.jpg");
+}
+.available-section-space {
+  padding: 180px 0 180px 0;
+}
+/*========================================== TAXI AVAILABLE 24/7 SERVICE  END ===========================================*/
+/*========================================== TAXI BOOKING START ===========================================*/
+
+.app-heading-top {
+  padding-top: 120px;
+}
+.app-top {
+  padding-top: 30px;
+}
+.app-right {
+  padding-right: 20px;
+}
+.app-list-top {
+  padding-top: 20px;
+}
+.app-list-bottom {
+  padding-bottom: 15px;
+}
+.app-list-left {
+  padding-left: 15px;
+}
+.app-list {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+}
+/*========================================== TAXI BOOKING END ===========================================*/
+/*========================================== OUR BEST TARIFF PLANS START ===========================================*/
+
+.plans-price-fs {
+  color: #333333;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.plans-radius {
+  border-radius: 10px 10px 0 0;
+}
+.plans-radius-1 {
+  border-radius: 0 0 10px 10px;
+}
+.plans-bg-1,
+.plans-bg-2,
+.plans-fs {
+  transition: 300ms ease-in;
+}
+.plans-bg-1 {
+  background-color: #ffffff;
+  width: 100%;
+}
+.plans-bg-2 {
+  background-color: #f6f6f6;
+  width: 100%;
+}
+.plans-br {
+  border-right: 1px solid #cccccc;
+}
+.plans-pad {
+  padding: 15px 15px 15px 15px;
+  width: 50%;
+}
+.plans-bg-1:hover,
+.plans-bg-2:hover {
+  background-color: #1bbc9b;
+}
+.plans-bg-1:hover .plans-fs,
+.plans-bg-2:hover .plans-fs {
+  color: #f3f3f3;
+}
+/*========================================== OUR BEST TARIFF PLANS  END ===========================================*/
+/*========================================== OUR LATEST GALLERY START ===========================================*/
+
+.gallery-row-bottom {
+  padding-bottom: 10px;
+}
+.gallery-pad {
+  padding: 0 5px;
+}
+/*========================================== OUR LATEST GALLERY END ===========================================*/
+/*========================================== OUR TEAM START ===========================================*/
+
+.teambg {
+  background-color: #ffffff;
+}
+.zoom-area {
+  overflow: hidden;
+}
+.find-image {
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.find-image:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.team-social-icon li {
+  list-style: none;
+  display: inline-block;
+}
+.team-social-lr-pad li {
+  padding-left: 10px;
+}
+.team-social-lr-pad li:first-child {
+  padding-left: 0;
+}
+.teambg-author-bottom {
+  margin-bottom: 5px;
+}
+.teambg-design {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.teambg-padding {
+  padding: 20px 15px 20px 15px;
+}
+/*========================================== OUR TEAM END ===========================================*/
+/*========================================== EMAIL SUBSCRIPTION START ===========================================*/
+
+.subscription-bgimage {
+  background-image: url("../images/1500x500x1.jpg");
+}
+.signup-bgimage {
+  background-image: url("../images/1500x500x2.jpg");
+}
+.email-success,
+.email-failure {
+  color: #f3f3f3;
+  font-size: 14px;
+  font-weight: 600;
+}
+.indicator-top {
+  padding-top: 15px;
+}
+.email-text-bottom {
+  margin-bottom: 30px;
+}
+/*========================================== EMAIL SUBSCRIPTION END ===========================================*/
+/*========================================== OUR HAPPY CUSTOMERS START ===========================================*/
+
+.customer-bg {
+  background-color: #ffffff;
+  padding: 20px 20px 20px 20px;
+  border: 1px solid transparent;
+}
+.customer-text {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+.customer-design {
+  color: #1bbc9b;
+  font-size: 13px;
+  font-weight: 700;
+}
+/*========================================== OUR HAPPY CUSTOMERS END ===========================================*/
+/*========================================== SUPPORT START ===========================================*/
+
+.support-bgimage {
+  background-image: url("../images/1500x600x2.jpg");
+}
+.support-section-space {
+  padding: 180px 0 180px 0;
+}
+.support-text-bottom {
+  margin-bottom: 30px;
+}
+.phone-text {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+}
+.phone-left-pad {
+  padding-left: 15px;
+}
+.conditions-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 30px;
+}
+.bgimage-head-bottom {
+  margin-bottom: 20px;
+}
+/*========================================== SUPPORT END ===========================================*/
+/*========================================== FOOTER START =========================================*/
+
+.footer-section-space {
+  padding: 80px 0 40px 0;
+}
+.contact-heading-bottom {
+  margin-bottom: 20px;
+}
+.follow-heading-bottom {
+  margin-bottom: 15px;
+}
+.adress-line-bottom {
+  margin-bottom: 8px;
+}
+.footer-row-space {
+  margin-bottom: 20px;
+}
+.footer-icon li {
+  list-style: none;
+  display: inline-block;
+}
+.footer-left-pad li {
+  padding-left: 10px;
+}
+.footer-left-pad li:first-child {
+  padding-left: 0;
+}
+.form-bottom-1 {
+  margin-bottom: 25px;
+}
+.form-text {
+  height: 40px;
+}
+.footer-br {
+  border-bottom: 1px solid #cccccc;
+  margin-top: 40px;
+}
+.footer-br-bottom {
+  margin-bottom: 40px;
+}
+.form-div input.error,
+.form-div-1 textarea.error {
+  border-color: #ff0000 !important;
+}
+.contact-div label {
+  color: #ff0000;
+  font-size: 12px;
+  font-weight: 600;
+}
+.errorClass {
+  border: 1px solid #ff0000 !important;
+}
+.form-success,
+.form-failure {
+  font-size: 14px;
+  font-weight: 600;
+}
+.form-success {
+  color: #50cd88;
+}
+.form-failure {
+  color: #ff0000;
+}
+.submit-reset {
+  margin: 0 0 0 auto;
+  padding-top: 25px;
+}
+.submit-right-pad {
+  padding-right: 30px;
+}
+.form-error-top {
+  padding-top: 10px;
+}
+/*========================================== FOOTER END ===========================================*/
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .app-heading-top {
+    padding-top: 0;
+  }
+  .res-width-full {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .gallery-row-bottom {
+    padding-bottom: 6px;
+  }
+  .gallery-pad {
+    padding: 0 3px;
+  }
+  .services-res-bottom,
+  .why-res-bottom {
+    padding-bottom: 30px;
+  }
+  .res-image-bottom {
+    padding-bottom: 20px;
+  }
+  .common-res-bottom {
+    padding-bottom: 40px;
+  }
+  .types-row-bottom,
+  .news-res-row-bottom {
+    padding-bottom: 40px;
+  }
+  .logo-res-bottom {
+    padding-bottom: 30px;
+  }
+  .app-heading-top {
+    padding-top: 0;
+  }
+  .res-client-space {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 767px) {
+  .navbar-toggle {
+    margin-right: 0;
+  }
+  .navbar-right {
+    padding-top: 10px;
+  }
+  .menu-fs,
+  .menu-fs li {
+    margin: 5px 0;
+  }
+  .res-image-bottom-1 {
+    padding-bottom: 20px;
+  }
+  .common-res-bottom-1 {
+    padding-bottom: 40px;
+  }
+  .res-client-space-1,
+  .services-res-bottom {
+    margin-bottom: 30px;
+  }
+  .types-row-bottom {
+    padding-bottom: 40px;
+  }
+  .price-fixed,
+  .customers-fixed {
+    margin: 0 auto;
+    width: 400px !important;
+  }
+  .price-res-bottom,
+  .customers-res-bottom {
+    margin-bottom: 40px;
+  }
+  .price-res-bottom:last-child,
+  .customers-res-bottom:last-child {
+    margin-bottom: 0;
+  }
+  .app-heading-top {
+    padding-top: 30px;
+  }
+  .gallery-row-bottom {
+    padding-bottom: 30px;
+  }
+  .gallery-res-bottom {
+    padding: 0 15px 30px 15px;
+  }
+  .gallery-res-bottom:last-child {
+    padding: 0 15px 0 15px;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 639px) {
+  .common-full {
+    width: 100% !important;
+  }
+  .plans-res-bottom {
+    padding-bottom: 40px;
+  }
+  .counter-res-bottom {
+    padding-bottom: 30px;
+  }
+  .features-res-bottom {
+    padding-bottom: 30px;
+  }
+  .phone-text {
+    font-size: 36px;
+  }
+
+  h1 {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .btn-1,
+  .header-btn {
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .menu-fs {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .counter-num {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+  .pricing-tag {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .app-list {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .plans-price-fs {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 479px) {
+  .common-full-1 {
+    width: 100% !important;
+  }
+  .services-res-bottom-1 {
+    padding-bottom: 30px;
+  }
+  .price-fixed,
+  .customers-fixed {
+    width: 100% !important;
+  }
+  .why-res-bottom,
+  .why-res-bottom-1 {
+    padding-bottom: 30px;
+  }
+  .counter-res-bottom {
+    padding-bottom: 30px;
+  }
+  .phone-text {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .news-res-row-bottom-1,
+  .team-res-bottom {
+    padding-bottom: 40px;
+  }
+}
